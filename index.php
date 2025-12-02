@@ -21,15 +21,23 @@
             <?php include "includes/carousel.php"; ?>
           </div>
           <div class="courses-container d-flex flex-column mt-5 px-4 pt-3 pb-4">
-            <h2>My Courses</h2>
-            <div class="d-flex flex-row justify-content-between gap-3">
+            <div class="d-flex flex-row justify-content-between align-items-center">
+                <h2>My Courses</h2>
+                <a href="">view all</a>
+            </div>
+            <div class="d-flex flex-row justify-content-between gap-3 mt-4">
               <?php include "includes/course-card.php"; ?>
             </div>
           </div>
         </div>
-        <div class="d-flex flex-column home-right-panel py-3 mt-4" style="flex: 1 1 0;">
-          <div></div>
-          <div class="task-container d-flex flex-column"></div>
+        <div class="d-flex flex-column home-right-panel py-3 mt-5" style="flex: 1 1 0;">
+          <div>
+            <!-- to do: add calendar -->
+          </div>
+          <div class="task-container d-flex flex-column px-4 py-2 gap-3">
+            <h5 style="font-weight: 600">Upcoming Tasks</h5>
+            <?php include "includes/task-card.php"; ?>
+          </div>
         </div>
       </div>                 
     </div>
