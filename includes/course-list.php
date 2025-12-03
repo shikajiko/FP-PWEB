@@ -1,7 +1,9 @@
 <div class="d-flex flex-column course-list-box px-4 py-3">
     <div class="d-flex flex-row gap-2">
         <p><?= $c['code'] ?></p>
-        <p style="color: #866fd8"><?= $c['name'] ?></p>
+        <a href="?page=course&code=<?= urlencode($c['code']) ?>" style="color: #866fd8">
+            <?= $c['name'] ?>
+</a>
     </div>
     <div class="row g-0 w-75">
         <div class="d-flex flex-row gap-2 col-2">

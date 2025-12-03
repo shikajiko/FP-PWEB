@@ -16,7 +16,7 @@
     </div>
     <div class="d-flex flex-column course-box gap-0" style="flex: 1 1 0;">
         <?php foreach ($courses as $c) {
-            include "includes/course.php";
+            include "includes/course-list.php";
         } ?>
     </div>
 </div>

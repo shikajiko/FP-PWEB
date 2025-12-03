@@ -88,3 +88,39 @@ a {
 .sidebar-active svg path{
     fill: #866fd8;
 }
+
+.sidebar-section{
+    border-bottom: 1px solid lightgrey;
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+}
+
+.white-box{
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 1px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+#myAccordion {
+  border-radius: 20px;
+  overflow: hidden;               
+  background: transparent;            
+}
+
+#myAccordion .accordion-item {
+  border-radius: 20px; 
+}
+
+
+#myAccordion .accordion-button {
+  border-radius: 0;
+  margin: 0;
+  box-shadow: none;   
+}
+
+
+#myAccordion .accordion-collapse,
+#myAccordion .accordion-body {
+  background: transparent;
+  border: 0;
+}

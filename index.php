@@ -1,10 +1,5 @@
 <?php
 $currentPage = $_GET['page'] ?? 'dashboard';  
-
-$allowedPages = ['dashboard', 'courses', 'tasks', 'profile'];
-if (!in_array($currentPage, $allowedPages)) {
-    $currentPage = 'dashboard';
-}
 $cssPath = "styles/" . $currentPage . ".css";
 ?>
 
