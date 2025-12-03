@@ -1,3 +1,13 @@
+<?php
+$currentPage = $_GET['page'] ?? 'dashboard';  
+
+$allowedPages = ['dashboard', 'courses', 'tasks', 'profile'];
+if (!in_array($currentPage, $allowedPages)) {
+    $currentPage = 'dashboard';
+}
+$cssPath = "styles/" . $currentPage . ".css";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +15,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/globals.css">
-    <title>Dashboard</title>
+        <?php if (file_exists($cssPath)): ?>
+        <link rel="stylesheet" href="<?= $cssPath ?>">
+    <?php endif; ?>
+    <title><?= ucfirst($currentPage) ?></title>
 </head>
 <body>
     <div class="container-fluid p-0 main-container">
@@ -15,31 +28,7 @@
     </div>
     <div class="col d-flex flex-column px-5">    
       <?php include "includes/header.php"; ?>
-      <div class="d-flex flex-row gap-5 w-100"> 
-        <div class="d-flex flex-column" style="flex: 2 1 0;">
-          <div class="mt-5">
-            <?php include "includes/carousel.php"; ?>
-          </div>
-          <div class="courses-container d-flex flex-column mt-5 px-4 pt-3 pb-4">
-            <div class="d-flex flex-row justify-content-between align-items-center">
-                <h2>My Courses</h2>
-                <a href="">view all</a>
-            </div>
-            <div class="d-flex flex-row justify-content-between gap-3 mt-4">
-              <?php include "includes/course-card.php"; ?>
-            </div>
-          </div>
-        </div>
-        <div class="d-flex flex-column home-right-panel py-3 mt-5" style="flex: 1 1 0;">
-          <div>
-            <!-- to do: add calendar -->
-          </div>
-          <div class="task-container d-flex flex-column px-4 py-2 gap-3">
-            <h5 style="font-weight: 600">Upcoming Tasks</h5>
-            <?php include "includes/task-card.php"; ?>
-          </div>
-        </div>
-      </div>                 
+      <?php include "pages/" . $currentPage . ".php"; ?>
     </div>
   </div>
 </div>
