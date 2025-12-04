@@ -34,7 +34,7 @@
                     <button type="submit" class="mt-4 btn-login w-100 py-3">Sign up</button>
                     <div class="d-flex flex-row gap-2 justify-content-center mt-3">
                         <p style="font-size: 1.2rem;">Already have an account?</p>
-                        <a href="" style="font-size: 1.2rem; text-decoration: none; font-weight: 600;"> Sign up</a>
+                        <a href="" style="font-size: 1.2rem; text-decoration: none; font-weight: 600;"> Sign in</a>
                     </div>
                 </form>
             </div>
