@@ -71,6 +71,14 @@ body{
     font-size: x-large;
 }
 
+.btn-resend{
+    color:white;
+    background-color: #463583;
+    border-radius: 5vh;
+    border: none;
+    font-size: large;
+}
+
 .btn-login:hover{
   background-color: #5d48a8;
   color: #8d7cca;;
